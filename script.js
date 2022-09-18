@@ -210,7 +210,12 @@ btnClose.addEventListener("click", function (e) {
    inputCloseUsername.value = inputClosePin.value = "";
 });
 
-
+let sorted = false;
+btnSort.addEventListener('click', function(e){
+   e.preventDefault();
+   displayMovments(currentAccount.movements, !sorted);
+   sorted = !sorted; 
+});
 
 // const calcAvgHumanAge = function (ages) {
 //    const humanAges = ages.map((age) => (age <= 2 ? 2 * age : 16 + age * 4));
